@@ -2,6 +2,8 @@
 
 This repository contains Python scripts designed to analyze various aspects of grid trading strategies using sequences of -1 and 1 to represent trading grid hits. Each script focuses on a different aspect of grid trading analysis, calculating the average results of sequences, and evaluating the performance of specific subsequences within a given sequence.
 
+Note that these results are independent of the price, so here we are focusing on comparing impermanent loss and realized profit. A position's value may decrease due to a price fall even if the impermanent loss is less than the realized profit. For a more in-depth analysis that considers price, please check https://github.com/arbnom/Grid-Trading-Backtest-Tool.
+
 ## Scripts Overview
 
 ### `average_sequence_upto_length.py`
