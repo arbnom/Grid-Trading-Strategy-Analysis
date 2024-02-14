@@ -21,7 +21,7 @@ def calculate_profit_loss(sequences, quantity_per_grid, diff_between_grids):
     for seq in sequences:
         L = len(seq)  # Length of the sequence
         S = sum(seq)  # Sum of the sequence
-        impermanent_loss = quantity_per_grid * diff_between_grids * abs(((S - 1) * S) / 2)
+        impermanent_loss = quantity_per_grid * diff_between_grids * ((abs(S) - 1) * abs(S)) / 2
         realized_profit = quantity_per_grid * diff_between_grids * (L - S) / 2
         profit_loss = realized_profit - impermanent_loss
 
