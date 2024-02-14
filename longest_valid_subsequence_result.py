@@ -29,7 +29,7 @@ def find_longest_valid_subsequence(sequence, initial_grid_index, num_grids):
 def calculate_subsequence_result(subsequence, quantity_per_grid, diff_between_grids):
     L = len(subsequence)
     S = sum(subsequence)
-    impermanent_loss = quantity_per_grid * diff_between_grids * abs(((S - 1) * S) / 2)
+    impermanent_loss = quantity_per_grid * diff_between_grids *((abs(S) - 1) * abs(S)) / 2
     realized_profit = quantity_per_grid * diff_between_grids * (L - S) / 2
     result = realized_profit - impermanent_loss
 
